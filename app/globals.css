@@ -151,6 +151,22 @@ h1 {
 .topic-card span { display: block; font-weight: 800; color: var(--text); }
 .topic-card small { color: var(--muted); display: block; margin-top: 6px; line-height: 1.32; }
 
+.room-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, .56fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+.room-action-row .primary.big,
+.room-action-row .secondary.big {
+  width: 100%;
+  min-width: 0;
+  margin-top: 0;
+}
+.end-rehearsal {
+  border-color: rgba(240,198,111,.55);
+  color: var(--amber-strong);
+}
 .input-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
 .input-actions span, .storage-pill { color: var(--muted); font-size: 12px; }
 textarea, input {
@@ -553,7 +569,7 @@ dt { color: var(--green); font-family: var(--mono); font-size: 11px; font-weight
 @keyframes pulseThink { 0%,100% { transform: translateY(0) scale(.97); opacity:.72; } 50% { transform: translateY(-5px) scale(1.03); opacity:1; } }
 @media (max-width: 1040px) { .layout-grid, .room-stage-layout, .cinema-hero { grid-template-columns:1fr; } .sticky-room { position: static; } .persona-form.horizontal { grid-template-columns:1fr 1fr; } .app-topic-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 920px) { .report-columns { grid-template-columns: 1fr; } .cards-grid, .score-grid, .setup-list, .report-audience-strip > div { grid-template-columns: repeat(2, minmax(0,1fr)); } .audience-risers { grid-template-columns: repeat(3, minmax(0,1fr)); } .hero { grid-template-columns: 1fr; } .topbar, .screen-hero.split, .room-title-row { flex-direction:column; } .stepper { justify-content:flex-start; } }
-@media (max-width: 680px) { main, .app-shell { width: min(100% - 16px, 1180px); } .topic-grid, .app-topic-grid, .reaction-list, .rubric-grid, .persona-form.horizontal, .setup-list, .report-audience-strip > div { grid-template-columns: 1fr; } .audience-risers { grid-template-columns: repeat(2, minmax(0,1fr)); } .report-header, .app-report-header, .report-actions { flex-direction: column; } .agent-console { white-space: normal; text-align:center; } .stage-wrap { min-height: auto; } .primary.big { width:100%; } .cinema-copy, .cinema-frame { min-height:280px; } .cinema-copy { padding:4px 0; } }
+@media (max-width: 680px) { main, .app-shell { width: min(100% - 16px, 1180px); } .topic-grid, .app-topic-grid, .reaction-list, .rubric-grid, .persona-form.horizontal, .setup-list, .report-audience-strip > div, .room-action-row { grid-template-columns: 1fr; } .audience-risers { grid-template-columns: repeat(2, minmax(0,1fr)); } .report-header, .app-report-header, .report-actions { flex-direction: column; } .agent-console { white-space: normal; text-align:center; } .stage-wrap { min-height: auto; } .primary.big { width:100%; } .cinema-copy, .cinema-frame { min-height:280px; } .cinema-copy { padding:4px 0; } }
 
 /* room-reader v4: persona prompt copy panel */
 .persona-prompt-panel {
